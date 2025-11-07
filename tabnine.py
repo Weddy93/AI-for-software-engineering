@@ -1,17 +1,5 @@
 def sort_dicts_by_key(list_of_dicts, key):
-    """
-    Sorts a list of dictionaries by a specific key.
-
-    Args:
-    list_of_dicts (list): A list of dictionaries to be sorted.
-    key (str): The key by which to sort the dictionaries.
-
-    Returns:
-    list: The sorted list of dictionaries.
-
-    Raises:
-    TypeError: If list_of_dicts is not a list or if elements are not dictionaries.
-    """
+    
     if not isinstance(list_of_dicts, list):
         raise TypeError("list_of_dicts must be a list")
     for item in list_of_dicts:
@@ -49,13 +37,13 @@ if __name__ == "__main__":
     sorted_single = sort_dicts_by_key(single_data, "age")
     print("Single dict:", sorted_single)
 
-    # Test error handling: non-list
+  
     try:
         sort_dicts_by_key("not a list", "age")
     except TypeError as e:
         print("Error for non-list:", e)
 
-    # Test error handling: non-dict in list
+
     try:
         sort_dicts_by_key([{"name": "Alice"}, "not a dict"], "age")
     except TypeError as e:
